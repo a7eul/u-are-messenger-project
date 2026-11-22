@@ -1,0 +1,136 @@
+.message {
+  display: flex;
+  gap: 16px;
+  max-width: 100%;
+  margin-top: 16px;
+  position: relative;
+}
+
+.message:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+/* Сгруппированные сообщения — меньший отступ */
+.message.message-grouped {
+  margin-top: 4px;
+}
+
+/* Аватар */
+.message-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--bg-avatar);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Время для сгруппированных сообщений — скрыто по умолчанию */
+.message-time {
+  width: 40px;
+  flex-shrink: 0;
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  text-align: right;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  padding-top: 2px;
+  user-select: none;
+}
+
+/* Показываем время при hover на сгруппированное сообщение */
+.message-grouped:hover .message-time {
+  opacity: 1;
+}
+
+/* Тело сообщения */
+.message-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Reply-цитата */
+.message-reply {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 2px 0;
+  margin-bottom: 2px;
+}
+
+.message-reply-bar {
+  width: 2px;
+  background-color: var(--text-secondary);
+  border-radius: 1px;
+  flex-shrink: 0;
+  align-self: stretch;
+  margin-top: 4px;
+}
+
+.message-reply-content {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: var(--font-size-sm);
+}
+
+.message-reply-sender {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.message-reply-text {
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 400px;
+}
+
+/* Шапка: ник + дата */
+.message-header {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.message-sender {
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.message-date {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+/* Текст сообщения */
+.message-text {
+  font-size: var(--font-size-base);
+  color: var(--text-primary);
+  line-height: 1.4;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+/* Сгруппированные — скрываем аватар и шапку */
+.message-grouped .message-avatar,
+.message-grouped .message-header {
+  display: none;
+}
+
+/* Удалённое сообщение */
+.message-deleted {
+  opacity: 0.6;
+}
+
+.message-text-deleted {
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: var(--font-size-sm);
+}

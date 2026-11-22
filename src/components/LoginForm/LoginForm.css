@@ -1,0 +1,119 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: var(--card-width);
+  max-width: 100%;
+  height: var(--card-height);
+  padding: var(--card-padding-top) var(--card-padding-x) var(--card-padding-bottom);
+  background: var(--bg-card);
+  border-radius: var(--radius-card);
+  gap: 0;
+}
+
+.login-title {
+  font-size: var(--font-size-title);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+  margin-bottom: var(--gap-title-input);
+  align-self: center;
+}
+
+/* — Поля ввода — */
+.login-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: var(--input-width);
+  max-width: 100%;
+  background: var(--bg-input);
+  border-radius: var(--radius-input);
+  transition: box-shadow var(--transition-fast);
+}
+
+.login-field--login {
+  height: var(--input-height-login);
+  margin-bottom: var(--gap-input-input);
+}
+
+.login-field--password {
+  height: var(--input-height-pass);
+  margin-bottom: var(--gap-input-button);
+}
+
+.login-field:focus-within {
+  box-shadow: 0 0 0 2px var(--icon-color);
+}
+
+.login-icon {
+  position: absolute;
+  left: var(--icon-offset);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  color: var(--icon-color);
+  pointer-events: none;
+}
+
+.login-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.login-field input {
+  width: 100%;
+  height: 100%;
+  padding: var(--input-padding);
+  font-size: var(--font-size-input);
+  color: var(--text-primary);
+  background: transparent;
+  border-radius: var(--radius-input);
+}
+
+.login-field input::placeholder {
+  color: var(--text-placeholder);
+  font-weight: var(--font-weight-normal);
+}
+
+/* — Кнопка — */
+.login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--button-width);
+  max-width: 100%;
+  height: var(--button-height);
+  background: var(--bg-button);
+  color: var(--text-on-button);
+  font-size: var(--font-size-button);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-button);
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.login-button:hover {
+  opacity: 0.92;
+}
+
+.login-button:active {
+  transform: scale(0.98);
+}
+
+/* — Адаптив — */
+@media (max-width: 760px) {
+  .login-form {
+    width: 100%;
+    height: auto;
+    padding: 32px 24px;
+  }
+  .login-field {
+    width: 100%;
+  }
+  .login-button {
+    width: 100%;
+  }
+}

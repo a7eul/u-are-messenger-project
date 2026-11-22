@@ -1,0 +1,87 @@
+:root {
+  /* — Цвета фона — */
+  --bg-canvas:        #61598C; /* фон страницы */
+  --bg-sidebar:       #222440; /* сайдбар + шапка + низ */
+  --bg-card:          #352A5B; /* карточка входа */
+  --bg-card-alt:      #43376F; /* контейнер иконок слева */
+  --bg-input:         #222440; /* поля ввода */
+  --bg-button:        #FFFFFF; /* кнопка */
+  --bg-search:        #E7E7E8; /* поле поиска */
+  --bg-avatar:        #D9D9D9; /* аватары-плейсхолдеры */
+
+  /* — Обводки — */
+  --border-card:      #433C66; /* обводка карточек чатов */
+  --border-divider:   #61598C; /* разделители между чатами */
+  --border-divider-active: #F5F5F5;
+
+  /* — Текст — */
+  --text-primary:     #FFFFFF;
+  --text-secondary:   #CECECE;
+  --text-tertiary:    #B9B9B9;
+  --text-muted:       #9E9E9E;
+  --text-on-light:    #0D0000;
+  --text-accent:      #EAEBFF; /* иконки слева */
+  --text-placeholder: #9E9E9E;
+  --text-on-button:   #352A5B;
+
+  /* — Иконки — */
+  --icon-color:       #EAEBFF;
+
+  /* — Скругления (из SVG rx) — */
+  --radius-item:      36px;  /* карточки чатов, узкая панель */
+  --radius-composer:  25px;  /* поле ввода, поиск */
+  --radius-card:      20px;
+  --radius-input:     14px;
+  --radius-button:    14px;
+  --radius-round:     50%;
+
+  /* — Геометрия макета — */
+  --header-height:    52px;
+  --sidebar-width:    407px;
+  --narrow-panel-width: 99px;
+  --composer-height:  98px;
+  --chat-row-height:  108px;
+  --chat-card-height: 78px;
+  --app-max-width:    1440px;
+  --app-height:       1024px;
+
+  /* — Типографика — */
+  --font-family: 'Inter', -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-size-xs:   12px;
+  --font-size-sm:   13px;
+  --font-size-base: 14px;
+  --font-size-lg:   16px;
+  --font-size-xl:   20px;
+  --line-height-base: 1.4;
+  --font-size-title:    32px;
+  --font-size-input:    15px;
+  --font-size-button:   16px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+
+  /* — Размеры из макета (px) — */
+  --card-width:       704px;
+  --card-height:      470px;
+  --card-padding-x:   91px;  /* (704 - 519) / 2 */
+  --card-padding-top: 47px;  /* отступ до заголовка */
+  --card-padding-bottom: 47px;
+
+  --input-width:      519px;
+  --input-height-login: 60px;
+  --input-height-pass:  63px;
+  --input-padding:    0 20px 0 56px; /* слева место под иконку */
+
+  --button-width:     284px;
+  --button-height:    64px;
+
+  --icon-size:        20px;
+  --icon-offset:      20px; /* отступ иконки от левого края поля */
+
+  /* — Отступы между элементами — */
+  --gap-title-input:    32px;
+  --gap-input-input:    12px;
+  --gap-input-button:   32px;
+
+  /* — Переходы — */
+  --transition-fast: 120ms ease;
+}

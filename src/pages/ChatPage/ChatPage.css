@@ -1,0 +1,38 @@
+.chat-page {
+  display: grid;
+  grid-template-columns: 99px 407px 1fr;
+  grid-template-rows: 52px 1fr 98px;
+  grid-template-areas:
+    "header header header"
+    "narrow sidebar chat"
+    "narrow sidebar composer";
+  height: 100vh;
+  width: 100%;
+  background-color: var(--bg-canvas);
+}
+
+.chat-header {
+  grid-area: header;
+  background-color: var(--bg-sidebar);
+}
+
+.narrow-panel {
+  grid-area: narrow;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.chat-area {
+  grid-area: chat;
+}
+
+.composer {
+  grid-area: composer;
+  background-color: var(--bg-sidebar);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+}
