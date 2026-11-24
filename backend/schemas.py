@@ -24,12 +24,36 @@ class UserResponse(BaseModel):
     class Config:
         from_attributes = True
 
-class ChatCreate(BaseModel):
-    title: Optional[str] = None
-    type: str
-    description: Optional[str] = None
-    user_ids: List[int]
+class UserLogin(BaseModel):
+    username: str
+    password: str
 
-class MessageCreate(BaseModel):
+class Token(BaseModel):
+    access_token: str
+    token_type: str
+
+class TokenData(BaseModel):
+    user_id: Optional[int] = None
+
+class LastMessage(BaseModel):
     content: str
-    reply_to_id: Optional[int] = None
+    created_at: datetime
+    sender_name: str
+
+class ChatResponse(BaseModel):
+    chat_id: int
+    type: str
+    title: Optional[str]
+    avatar_url: Optional[str]
+    last_message: Optional[LastMessage] = None
+    participants_count: int
+    
+    class Config:
+        from_attributes = True
+
+class ChatPrivateCreate(BaseModel):
+    username: str
+
+class ChatGroupCreate(BaseModel):
+    title: str
+    user_ids: List[int]
