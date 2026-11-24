@@ -1,0 +1,32 @@
+.chat-area {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--bg-canvas);
+}
+
+.chat-area-header {
+  padding: 24px 32px;
+  background-color: var(--bg-sidebar);
+}
+
+.chat-area-title {
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.chat-area-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.messages-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* ← обязательно, иначе gap складывается с margin */
+}

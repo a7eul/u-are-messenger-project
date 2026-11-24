@@ -1,0 +1,80 @@
+.narrow-panel {
+  grid-area: narrow;
+  background-color: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center; /* ← центрировать контейнер по вертикали */
+  padding: 16px 0;
+  height: 100%;
+}
+
+/* Контейнер — компактный, только вокруг элементов */
+.narrow-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-card);
+  border-radius: var(--radius-item);
+  width: 76px;
+  padding: 16px 0;
+  /* Убрать height: 100% — пусть занимает только высоту содержимого */
+  max-height: 90%; /* ограничение чтобы не прилипал к краям */
+}
+
+.narrow-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: var(--bg-avatar);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-sm);
+  color: var(--text-on-light);
+  flex-shrink: 0;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.narrow-avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+.narrow-divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin: 12px 0;
+}
+
+.narrow-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: #FFFFFF;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  padding: 0;
+}
+
+.narrow-icon:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+.narrow-icon.active {
+  background-color: var(--bg-card-alt);
+}
+
+.narrow-icon svg {
+  width: 32px;
+  height: 32px;
+}
