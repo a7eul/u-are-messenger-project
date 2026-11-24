@@ -58,6 +58,9 @@ function LoginForm({ onLogin }) {
       <button type="submit" className="login-button">
         Войти
       </button>
+      <div className="login-register-link">
+        Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+      </div>
     </form>
   );
 }

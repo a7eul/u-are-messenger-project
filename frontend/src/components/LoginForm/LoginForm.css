@@ -117,3 +117,19 @@
     width: 100%;
   }
 }
+
+.login-register-link {
+  text-align: center;
+  margin-top: 16px;
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.login-register-link a {
+  color: var(--text-accent);
+  text-decoration: none;
+}
+
+.login-register-link a:hover {
+  text-decoration: underline;
+}
